@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactenosPage } from '../pages/contactenos/contactenos';
 
+import { WelcomePage } from '../pages/welcome/welcome';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -15,7 +17,7 @@ export class MyApp {
   private pages: Array<{titulo: string, component:any, icon:string}>;
   public rootPage: any;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    this.rootPage = HomePage;
+    this.rootPage = WelcomePage;
     this.pages = [
       { titulo: 'Inicio', component: HomePage,    icon: 'home' },
       { titulo: 'Perfil', component: PerfilPage , icon: 'person' },
