@@ -24,9 +24,9 @@ export class LoginPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public menu: MenuController, 
-    public authServiceProvider: AuthServiceProvider,
+    public menu: MenuController, public authServiceProvider: AuthServiceProvider,
     public alertCtl: AlertController ) {
+       
   }
 
   ionViewDidLoad() {
@@ -34,7 +34,7 @@ export class LoginPage {
   }
 
   ionViewWillEnter () { 
-    this.menu.enable (false); 
+    
   } 
 
   login(){
@@ -42,6 +42,7 @@ export class LoginPage {
       this.respouceData = result;
       console.log(this.respouceData);
       localStorage.setItem('user', JSON.stringify(this.respouceData));
+      //this.menu.enable (true); 
       this.navCtrl.push(HomePage); 
     }, (err) => {
       console.log("error ___________________")

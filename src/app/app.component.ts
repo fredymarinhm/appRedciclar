@@ -18,6 +18,7 @@ export class MyApp {
   public rootPage: any;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.rootPage = WelcomePage;
+    //this.rootPage = HomePage;
     this.pages = [
       { titulo: 'Inicio', component: HomePage,    icon: 'home' },
       { titulo: 'Perfil', component: PerfilPage , icon: 'person' },

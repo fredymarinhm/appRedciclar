@@ -13,10 +13,18 @@ export class HomePage {
     const data= JSON.parse(localStorage.getItem('user'));
     console.log(data);
     this.userDetails = data.user;
-    console.log(this.userDetails);
-    debugger
   }
-  ionViewWillEnter () { 
-    this.menu.enable (true); 
+
+  ionViewWillEnter () {
+
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad LoginPage');
+    
+  }
+  ionViewDidEnter(){
+    console.log("ionViewDidEnter");
+    
   }
 }
