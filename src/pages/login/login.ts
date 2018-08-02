@@ -23,7 +23,8 @@ export class LoginPage {
   userData = {"email":"", "password":""};
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController, 
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public menu: MenuController, 
     public authServiceProvider: AuthServiceProvider,
     public alertCtl: AlertController ) {
   }

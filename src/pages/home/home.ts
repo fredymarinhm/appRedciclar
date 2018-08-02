@@ -14,7 +14,7 @@ export class HomePage {
     console.log(data);
     this.userDetails = data.user;
     console.log(this.userDetails);
-    
+    debugger
   }
   ionViewWillEnter () { 
     this.menu.enable (true); 

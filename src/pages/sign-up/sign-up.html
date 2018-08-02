@@ -14,14 +14,35 @@
 
 
 <ion-content padding>
-  <img src="/assets/imgs/logo.jpg" class="img-logo" alt="">
+  <img src="/assets/imgs/logo.png" class="img-logo" alt="">
   <h1>ImagesGram</h1>
   
   <div class="content-log">
     <ion-list>
       <ion-item>
-        <ion-label floating>Nombre</ion-label>
+        <ion-label floating>Nombres</ion-label>
         <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Apellidos</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Documento</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.document"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Fecha de nacimiento</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.birthdate"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Dirección</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.address"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Teléfono</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.telephone"></ion-input>
       </ion-item>
 
       <ion-item>

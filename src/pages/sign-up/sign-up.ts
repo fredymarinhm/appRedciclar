@@ -20,7 +20,15 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 })
 export class SignUpPage {
   respouceData : any;
-  userData = {"name":"", "email":"", "password":"", "password_confirmation":""};
+  userData = {"name":"", "email":"", 
+    "last_name":"",
+    "document":"",
+    "birthdate":"",
+    "address":"",
+    "telephone":"",
+    "password":"", 
+    "password_confirmation":""
+  };
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
@@ -34,14 +42,14 @@ export class SignUpPage {
   }
 
   ionViewWillEnter () { 
-    this.menu.enable (false); 
+    this.menu.enable (true); 
   }
 
   SignUp(){
     this.authServiceProvider.postData(this.userData, "sign_up").then((result) => {
       this.respouceData = result;
       console.log(this.respouceData);
-      debugger
+      //debugger
       localStorage.setItem('user', JSON.stringify(this.respouceData));
       this.navCtrl.push(HomePage);
     }, (err) => {
