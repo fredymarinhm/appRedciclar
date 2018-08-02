@@ -19,6 +19,4 @@ export class HomePage {
   ionViewWillEnter () { 
     this.menu.enable (true); 
   }
-
-
 }
